@@ -1,0 +1,248 @@
+/* CommunityRecipes.css */
+.community-recipes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .community-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .community-header h2 {
+    color: #4caf50;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .community-header p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .submit-recipe-btn {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .submit-recipe-btn:hover {
+    background-color: #388e3c;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-tab {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.2s;
+  }
+  
+  .filter-tab:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .filter-tab.active {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+  }
+  
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .community-recipe-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .community-recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recipe-image {
+    position: relative;
+    height: 200px;
+  }
+  
+  .recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #999;
+    font-style: italic;
+  }
+  
+  .dietary-badges {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .dietary-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .dietary-badge.vegetarian {
+    background-color: #66bb6a;
+  }
+  
+  .dietary-badge.vegan {
+    background-color: #8bc34a;
+  }
+  
+  .dietary-badge.gluten-free {
+    background-color: #ffb74d;
+  }
+  
+  .dietary-badge.dairy-free {
+    background-color: #4fc3f7;
+  }
+  
+  .recipe-content {
+    padding: 20px;
+  }
+  
+  .recipe-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .recipe-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .recipe-title a:hover {
+    color: #4caf50;
+  }
+  
+  .recipe-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .recipe-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .total-time,
+  .servings {
+    display: flex;
+    align-items: center;
+  }
+  
+  .view-recipe-link {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .view-recipe-link:hover {
+    background-color: #f57c00;
+  }
+  
+  .no-matching-recipes,
+  .empty-community {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .reset-filter-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .reset-filter-btn:hover {
+    background-color: #388e3c;
+  }
+  
+  .login-prompt {
+    margin-top: 15px;
+  }
+  
+  .login-prompt a {
+    color: #4caf50;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .recipes-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recipes-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filter-tabs {
+      gap: 5px;
+    }
+    
+    .filter-tab {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }

@@ -1,0 +1,126 @@
+/* CalendarDay.css */
+.calendar-day {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+  }
+  
+  .day-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .day-name {
+    font-weight: 600;
+    display: block;
+    font-size: 16px;
+  }
+  
+  .day-date {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  .day-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .meal-slot {
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 80px;
+  }
+  
+  .meal-slot:last-child {
+    border-bottom: none;
+  }
+  
+  .meal-slot.drop-hover {
+    background-color: #e8f5e9;
+  }
+  
+  .meal-type {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .meal-recipes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .planned-recipe {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recipe-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .remove-recipe {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .remove-recipe:hover {
+    color: #d32f2f;
+  }
+  
+  .empty-slot {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+    font-size: 13px;
+    background-color: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Responsive adaptations */
+  @media (max-width: 768px) {
+    .calendar-day {
+      min-height: 250px;
+    }
+    
+    .meal-slot {
+      min-height: 60px;
+    }
+  }
